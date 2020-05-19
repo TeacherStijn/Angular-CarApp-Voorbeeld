@@ -1,0 +1,14 @@
+#garageautos {
+  width: 1100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#garageautos article {
+
+}
+
+.card-img-top {
+  height: 200px;
+}

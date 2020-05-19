@@ -1,0 +1,16 @@
+section {
+  width: 60vw;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+label, input, select, textarea {
+  margin-bottom: 0.5em;
+  width: 40%;
+}
+
+label span {
+  font-weight: bold;
+}

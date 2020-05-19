@@ -1,0 +1,34 @@
+<form [formGroup]="addAutoForm">
+  <section>
+    <label>Merk: <span>*</span></label>
+    <input type="text" formControlName="txtMerk" required="required" />
+    <label>Type: <span>*</span></label>
+    <input type="text" formControlName="txtType" required="required" />
+    <label>Productiejaar: <span>*</span></label>
+    <input type="number" min="1890" max="{{ currentTijd.getFullYear() }}" formControlName="txtJaar" required="required" />
+    <label>Afbeelding: <span>*</span></label>
+    <input type="text" formControlName="txtAfbeelding" required="required"  />
+    <label>Motorblok:</label>
+    <!-- Loop voor kiezen blok -->
+    <select formControlName="cmbMotorblok">
+      <option>Nieuw blok</option>
+    </select>
+    <label>Koppeling:</label>
+    <!-- Loop voor kiezen koppeling -->
+    <select formControlName="cmbKoppeling">
+      <option>Nieuwe koppeling</option>
+    </select>
+    <label>Remmen</label>
+    <input type="text" formControlName="txtRemmen"/>
+    <label>Kleur:</label>
+    <input type="color" formControlName="txtKleur" />
+    <label>Datum aanschaf:</label>
+    <input type="text" formControlName="txtAanschaf" placeholder="{{ currentTijd }}" [disabled]="!aanschafDatumEnable" (click)="aanschafDatumEnable=true" />
+    <label>Historie</label>
+    <textarea formControlName="txtHistorie"></textarea>
+  </section>
+
+  <button (click)="addAuto()" class="btn btn-success" [disabled]="!addAutoForm.valid">
+    <span>Add</span>
+  </button>
+</form>

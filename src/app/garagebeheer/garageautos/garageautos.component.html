@@ -1,0 +1,15 @@
+<h3>garageautos</h3>
+<section id="garageautos">
+  <article *ngFor="let auto of getAutos()">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="../assets/images/autos/{{ auto.afbeelding }}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{ auto.merk }} - {{ auto.type }}</h5>
+        <p class="card-text">{{ auto.verhaal }}</p>
+        <a (click)="details(auto)" href="#" class="btn btn-success">Details</a><!-- modal / popup -->
+        <a (click)="tuneAuto(auto)" href="#" class="btn btn-primary">Tuning</a>
+        <a (click)="dropAuto(auto)" href="#" class="btn btn-secondary">Verwijder</a>
+      </div>
+    </div>
+  </article>
+</section>

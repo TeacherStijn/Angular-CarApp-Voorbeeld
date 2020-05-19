@@ -1,0 +1,19 @@
+nav {
+  height: 20vh;
+}
+
+nav ul {
+  margin: 0px;
+  padding: 0px;
+  height: fit-content;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+nav li:hover {
+  border-bottom: 2px solid deepskyblue;
+  cursor: pointer;
+}
